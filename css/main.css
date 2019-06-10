@@ -1,7 +1,9 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal; }
 
 header {
   width: 100%;
@@ -13,121 +15,236 @@ main {
   margin: 0 auto; }
 
 .main-container {
-  width: 65%;
+  width: 70%;
   margin: 0 auto; }
 
 .title-default {
-  margin-top: 2%; }
+  margin-top: 3%; }
+  .title-default__top {
+    font-size: 50px;
+    text-transform: uppercase; }
+  .title-default__top::before {
+    content: "";
+    display: block;
+    width: 220px;
+    border-top: 1px solid #000; }
+  .title-default__bottom {
+    font-size: 30px;
+    margin-left: 22%;
+    width: max-content;
+    border-bottom: 1px solid #000; }
 
-.title-default h1 {
-  font-size: 50px;
-  font-weight: 300; }
-
-.title-default h1::before {
-  content: "";
-  display: block;
-  width: 180px;
-  border-top: 1px solid #000; }
-
-.title-default h2 {
-  font-size: 26px;
-  font-weight: 100;
-  margin-left: 15%;
-  width: max-content;
-  border-bottom: 1px solid #000; }
-
-.text-block {
+.txt-block {
+  font-size: 20px;
   margin-top: 3%; }
 
-.text-block p {
-  font-size: 20px; }
-
-.container-sales {
+.block-info {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 2%; }
+  margin-top: 3%; }
 
 .box-sales {
-  width: 55%; }
-  .box-sales__title h2 {
-    border-bottom: 1px solid #000; }
-  .box-sales__title h3 {
-    font-style: 30px;
-    display: flex;
-    justify-content: flex-end; }
+  width: 50%; }
 
-.sales-card {
+.sales-title {
+  margin-top: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .sales-title__top {
+    font-size: 30px;
+    width: 100%;
+    border-bottom: 1px solid #000; }
+  .sales-title__bottom {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 24px; }
+
+.sales-container {
+  width: 100%;
   display: flex;
   justify-content: space-between; }
-  .sales-card__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 30px 30px 30px; }
-  .sales-card__item h1 {
-    margin-top: 15%;
-    font-size: 50px; }
-  .sales-card__item h4 {
-    margin-top: 5%;
-    font-size: 18px;
-    text-align: center;
-    font-weight: 100; }
-  .sales-card__item p {
-    margin-top: 5%;
-    font-size: 12px;
-    text-align: center;
-    font-weight: 300; }
 
-.box-cashback {
-  width: 30%;
-  background-color: #000;
-  color: #fff;
-  padding: 40px; }
-
-.box-cashback h1 {
-  text-align: center;
-  font-weight: 300;
-  text-transform: uppercase;
-  padding-bottom: 30px; }
-
-.container-txt {
-  margin: 2% 0 2% 0;
+.sales-amount {
   display: flex;
-  justify-content: flex-end;
-  align-items: center; }
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-top: 5%; }
+  .sales-amount__interest {
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 800; }
+  .sales-amount__condition {
+    margin-top: 5%;
+    width: 170px;
+    text-align: center; }
+  .sales-amount__sm {
+    margin-top: 3%;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 12px; }
 
-.container-txt h4 {
-  font-size: 26px; }
+.sales-subsection {
+  padding-left: 7%;
+  padding-top: 3%;
+  font-size: 11px; }
+  .sales-subsection__paragraph:not(:last-child) {
+    padding-top: 3%; }
 
-.container-txt p {
-  font-size: 24px;
-  text-transform: uppercase; }
-
-.lineSm::before {
+.sales-subsection::before {
   content: "";
   display: block;
-  width: 50%;
-  border-top: 1px solid #000; }
+  width: 220px;
+  border-top: 1px solid #000;
+  margin-left: -7%; }
 
-.box-txt {
-  padding: 15px 0px 0px 30px; }
+.box-cashback {
+  width: 25%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px; }
+  .box-cashback__title {
+    text-align: center;
+    text-transform: uppercase;
+    width: 140px;
+    font-size: 30px; }
+  .box-cashback__paragraph {
+    margin-top: 15%; }
 
-.box-txt p {
+.promo-line {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 22px;
+  margin: 4% 0; }
+  .promo-line__bold {
+    font-weight: 800; }
+  .promo-line__text {
+    font-weight: 300; }
+
+.box-partners {
+  border-bottom: 1px solid #000;
+  padding-bottom: 5%; }
+  .box-partners__title {
+    font-size: 40px; }
+  .box-partners__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+.list__item {
+  width: 70%;
+  margin: 0 auto;
+  list-style: none;
+  margin-top: 3%;
+  display: flex; }
+
+.list__item-left {
+  margin-right: 20px; }
+
+.box-merits {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  padding: 5% 1%;
+  flex-wrap: wrap; }
+
+.merit {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .merit__info {
+    font-weight: 800;
+    margin-top: 15%;
+    font-size: 18px;
+    text-align: center; }
+  .merit__txt {
+    text-align: center; }
+
+sup {
   font-size: 12px; }
 
-.title-partners {
-  font-size: 24px; }
+@media screen and (max-width: 1025px) {
+  .box-cashback {
+    width: 40%;
+    padding: 25px; } }
 
-.partners--list p {
-  width: 80%;
-  margin: 0 auto; }
+@media screen and (max-width: 769px) {
+  .box-sales {
+    width: 100%; }
+  .box-cashback {
+    margin-top: 3%;
+    width: 100%;
+    padding: 25px; }
+    .box-cashback__paragraph {
+      margin-top: 5%; }
+  .merit {
+    width: 45%; }
+  .merit:nth-child(3) {
+    margin-top: 10%; }
+  .merit:nth-child(4) {
+    margin-top: 10%; }
+  .list__item {
+    width: 90%; } }
 
-.card {
-  display: flex;
-  justify-content: space-between; }
-  .card__item {
+@media screen and (max-width: 426px) {
+  .main-container {
+    width: 90%;
+    margin: 0 auto; }
+  .title-default {
+    margin-top: 3%; }
+    .title-default__top {
+      font-size: 35px;
+      text-transform: uppercase; }
+    .title-default__top::before {
+      content: "";
+      display: block;
+      width: 180px;
+      border-top: 1px solid #000; }
+    .title-default__bottom {
+      font-size: 22px;
+      margin-left: 42%;
+      width: max-content;
+      border-bottom: 1px solid #000; }
+  .txt-block {
+    font-size: 16px;
+    margin-top: 3%; }
+  .promo-line {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 18px;
+    margin: 4% 0; }
+  .box-partners__title {
+    font-size: 30px; }
+  .list__item {
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    margin-top: 3%;
+    display: flex; }
+  .box-merits {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; }
+    border-bottom: 1px solid #000;
+    padding: 5% 1%; }
+  .merit {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .merit__info {
+      font-weight: 800;
+      margin-top: 15%; }
+    .merit__txt {
+      text-align: center; }
+  .merit:not(:first-child) {
+    margin-top: 10%; } }
